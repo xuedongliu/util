@@ -1,0 +1,7 @@
+{
+  "name": "util",
+  "version": "0.0.1",
+  "description": "前端代码工具库",
+  "types": "index.d.ts",
+  "scripts": {}
+}
