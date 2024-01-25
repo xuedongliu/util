@@ -10,3 +10,5 @@ coverage/*
 # Editor directories and files
 .vscode
 .idea
+lib
+types

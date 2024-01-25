@@ -9,4 +9,4 @@ function isSupportWebP() {
     );
 }
 
-module.exports = isSupportWebP;
+export default isSupportWebP;

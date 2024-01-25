@@ -1,22 +1,22 @@
 function getTextWidth(text, font, letterSpacing, wordSpacing) {
   // 创建一个隐藏的canvas元素
-  var canvas = document.createElement('canvas');
-  var context = canvas.getContext('2d');
+  var canvas = document.createElement("canvas");
+  var context = canvas.getContext("2d");
 
   // 设置字体
   context.font = font;
 
   // 将文本分解为单词和空格
-  var words = text.split(' ');
+  var words = text.split(" ");
   var spaces = text.match(/\s/g);
 
   // 计算每个单词的实际宽度
-  var wordWidths = words.map(function(word) {
+  var wordWidths = words.map(function (word) {
     return context.measureText(word).width + letterSpacing * (word.length - 1);
   });
 
   // 计算所有单词和空格的总宽度
-  var totalWidth = wordWidths.reduce(function(sum, width) {
+  var totalWidth = wordWidths.reduce(function (sum, width) {
     return sum + width;
   }, 0);
 
@@ -27,18 +27,17 @@ function getTextWidth(text, font, letterSpacing, wordSpacing) {
   return totalWidth;
 }
 
-
 function getTextWidth(text, font, letterSpacing, wordSpacing) {
   // 创建一个隐藏的span元素
-  var span = document.createElement('span');
-  span.style.position = 'absolute';
-  span.style.left = '-9999px';
-  span.style.whiteSpace = 'nowrap'; // 防止换行
+  var span = document.createElement("span");
+  span.style.position = "absolute";
+  span.style.left = "-9999px";
+  span.style.whiteSpace = "nowrap"; // 防止换行
 
   // 设置字体和间距样式
   span.style.font = font;
-  span.style.letterSpacing = letterSpacing + 'px';
-  span.style.wordSpacing = wordSpacing + 'px';
+  span.style.letterSpacing = letterSpacing + "px";
+  span.style.wordSpacing = wordSpacing + "px";
 
   // 将文本添加到span元素中
   span.textContent = text;
@@ -55,18 +54,17 @@ function getTextWidth(text, font, letterSpacing, wordSpacing) {
   return width;
 }
 
-
 function getTextWidth(text, font, letterSpacing, wordSpacing) {
   // 创建一个临时的span元素
-  var span = document.createElement('span');
-  span.style.position = 'absolute';
-  span.style.left = '-9999px';
-  span.style.whiteSpace = 'nowrap'; // 防止换行
+  var span = document.createElement("span");
+  span.style.position = "absolute";
+  span.style.left = "-9999px";
+  span.style.whiteSpace = "nowrap"; // 防止换行
 
   // 设置字体和间距样式
   span.style.font = font;
-  span.style.letterSpacing = letterSpacing + 'px';
-  span.style.wordSpacing = wordSpacing + 'px';
+  span.style.letterSpacing = letterSpacing + "px";
+  span.style.wordSpacing = wordSpacing + "px";
 
   // 创建一个范围和文档片段
   var range = document.createRange();
@@ -79,7 +77,7 @@ function getTextWidth(text, font, letterSpacing, wordSpacing) {
   var width = span.offsetWidth;
 
   // 清空span元素的内容
-  span.textContent = '';
+  span.textContent = "";
 
   return width;
 }

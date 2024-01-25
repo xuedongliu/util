@@ -3,5 +3,21 @@
   "version": "0.0.1",
   "description": "前端代码工具库",
   "types": "index.d.ts",
-  "scripts": {}
+  "scripts": {
+    "build:dev": "tsc && tsc --project tsconfig-def.json",
+    "build": "yarn run build:dev"
+  },
+  "devDependencies": {
+    "lint-staged": "14",
+    "prettier": "3.2.4",
+    "typescript": "^4.5.5",
+    "webpack": "^5.69.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
 }
