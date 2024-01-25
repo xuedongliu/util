@@ -2,7 +2,7 @@
   "name": "util",
   "version": "0.0.1",
   "description": "前端代码工具库",
-  "types": "index.d.ts",
+  "types": "types",
   "scripts": {
     "build:dev": "tsc && tsc --project tsconfig-def.json",
     "build": "yarn run build:dev"
